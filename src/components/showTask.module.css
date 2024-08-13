@@ -1,0 +1,159 @@
+.showTask {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: violet;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.items h3 {
+  color: darkorchid;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.items span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rosybrown;
+  font-weight: bold;
+}
+
+div + button {
+  color: white;
+  background-color: blue;
+  border: none;
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: azure;
+  border-left: 6px solid blue;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-content span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: darkorchid;
+}
+
+.task-content small {
+  font-size: 0.875rem;
+  color: grey;
+}
+
+.task-icons {
+  display: flex;
+  gap: 10px;
+  color: dodgerblue;
+}
+
+.task-icons i:nth-child(2) {
+  color: orangered;
+}
+
+@media (max-width: 768px) {
+  .showTask {
+    padding: 10px 15px;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .items h3 {
+    font-size: 1.25rem;
+  }
+
+  .items span {
+    width: 30px;
+    height: 30px;
+  }
+
+  div + button {
+    width: 90px;
+    height: 35px;
+  }
+
+  .tasks {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .taskItem {
+    height: auto;
+  }
+
+  .task-content span {
+    font-size: 1rem;
+  }
+
+  .task-content small {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tasks {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  div + button {
+    width: 80px;
+    height: 30px;
+  }
+}
